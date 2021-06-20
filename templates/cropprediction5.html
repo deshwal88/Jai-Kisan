@@ -46,23 +46,26 @@
       fetch("/croprecommendation")
       .then((res)=>res.json().then(data=>{
 
-          let v1=data[0]['crop_name'];
-          let v2=data[0]['variety'];
-          console.log(v1,v2)
-          let crop="Crop Predicted : "+v1;
-          let seed="Seed Type : "+v2;
+          let v1=data[0]['crop_name'].toUpperCase()+' : '+data[0]['variety'];
+          let v2=data[1]['crop_name'].toUpperCase()+' : '+data[1]['variety'];
+          let v3=data[2]['crop_name'].toUpperCase()+' : '+data[2]['variety'];
+
           let container=document.querySelector(".text-content");
           let ele1=document.createElement("p");
-          let text1=document.createTextNode(crop);
+          let text1=document.createTextNode(v1);
           let ele2=document.createElement("p");
-          let text2=document.createTextNode(seed);
+          let text2=document.createTextNode(v2);
+          let ele3=document.createElement("p");
+          let text3=document.createTextNode(v3);
           ele1.appendChild(text1);
           ele2.appendChild(text2);
+          ele3.appendChild(text3)
           container.appendChild(ele1);
           container.appendChild(ele2);
-          ele1.style.padding='10px'
-          ele2.style.padding='10px'
-
+          container.appendChild(ele3);
+          ele1.style.padding='10px';
+          ele2.style.padding='10px';
+          ele3.stype.padding='10px';
         }))
 
       function predictAgain(){

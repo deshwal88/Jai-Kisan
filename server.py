@@ -134,7 +134,7 @@ def croppredict():
     for feature in features:
         data.append(inp[feature])
 
-    result=recom.get_recommendations(data,1)
+    result=recom.get_recommendations(data,3)
     return json.dumps(result)
 # ---------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>----------------------------------------
 
