@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Detection</title>
+    <link rel="stylesheet" href="../static/css/diseaseDetection.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="outerdiv">
+
+        <div class="imagecontainer">
+        </div>
+        <div class="box">
+          <div class="form-container">
+            <h1>What happened to my crop?</h1>
+            <br>
+            <form action="/detectdisease" method="POST" enctype = "multipart/form-data">
+                <div class="container image">
+                    <!-- <label for="image">Image</label> -->
+                    <p>Image</p>
+                    <br>
+                    <input type="file" name="image" class="ele">
+                </div>
+                <br><br>
+                <div class="container submit">
+                    <input type="submit" >
+                </div>
+              </form>
+             </div>
+             <div id='out'>
+               {{status}}
+               <br><br>
+               {{output}}
+             </div>
+           </div>
+          <a href="/">&lt&lt Back</a>
+         </div>
+   <script src="../static/diseaseDetection.js"></script>
+</body>
+</html>

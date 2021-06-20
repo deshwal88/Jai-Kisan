@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction3</title>
+    <link rel="stylesheet" href="../static/css/cropprediction3.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo">JKN</div>
+        <div class="home">
+          <i class="fa fa-home"><a href='/'>Home<a></i>
+        </div>
+    </div>
+
+        <h1>Crop Recommendation</h1>
+
+       <div class="form-container">
+           <form id='myform' action="/cropprediction4" method="post">
+             <div class="container climate">
+               <label>Temperature :</label><br>
+               <input type="number" placeholder="cm" name="temp" value="24" id='temp'></input>
+               <br>
+               <label>Rainfall :</label><br>
+               <input type="number" placeholder="Celcius" name="rainfall" value="50" id='rainfall'></input>
+             </div>
+           </form>
+       </div>
+
+        <div class="btns">
+            <button class="back btn" onclick="previousPage()">Back</button>
+            <button class="next btn" onclick="nextPage()">Next</button>
+        </div>
+
+    <nav class="progress-bar">
+        <ul>
+            <li><a href="/cropprediction1" class="active"></a></li>
+            <li><a href="/cropprediction2" class="active"></a></li>
+            <li><a href="/cropprediction3" class="active"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+
+        </ul>
+    </nav>
+
+    <script>
+
+        function nextPage(){
+          //   Put the Url here
+          let form=document.getElementById("myform");
+          form.submit();
+        }
+
+        function previousPage(){
+          //   Put the Url here
+           location.href="/cropprediction2";
+        }
+
+      </script>
+
+</body>
+</html>

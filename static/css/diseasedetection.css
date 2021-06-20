@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.outerdiv{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(28, 28, 51);
+}
+
+.imagecontainer{
+    width: 50vw;
+    height: 100vh;
+    background-image: url(../images/farmer5.jpg);
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+.box{
+
+    background-color: rgb(28, 28, 51);
+    border-radius: 10px;
+    color: white;
+    position: relative;
+}
+
+a{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: white;
+    paddding: 5px;
+    text-decoration: none;
+}
+
+.form-container{
+    width: 400px;
+    position:absolute;
+    left: 120px;
+    top: 100px;
+    align-items: center;
+
+}
+
+.form-container h1{
+    position: relative;
+    left: 10px;
+}
+
+
+.container{
+    margin: auto;
+    padding: 15px;
+    width: 100%;
+}
+
+.container p{
+    float: left;
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+.container .ele{
+    width: 100%;
+    background-color:  rgb(28, 28, 51);
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    border: 1px solid white;
+    outline: none;
+}
+
+
+.submit{
+    border:none;
+    outline: none;
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    background-color: green;
+    border-radius: 10px;
+}
+
+.submit input{
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+}
+
+#out{
+  width: 200px;
+  border-radius: 10px;
+  background-color: black;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  position: absolute;
+  left: 220px;
+  bottom: 100px;
+}

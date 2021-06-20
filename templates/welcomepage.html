@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="../static/css/welcomepage.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="outerdiv">
+        <div class="logo">
+            <h2>JKN</h2>
+        </div>
+
+        <div class="about">
+            <a onclick="aboutus()">About Us</a>
+        </div>
+
+        <div class="container">
+            <h2>Welcome to <span>Farmer's Friend</span></h2>
+        </div>
+        <div class="buttons">
+            <button class="button" onclick="cropRecommendation()">Crop Prediction</button>
+            <button class="button" onclick="diseaseDetection()">Disease Detection</button>
+        </div>
+    </div>
+
+
+
+    <script>
+
+    function aboutus(){
+        //   Put the Url here
+          location.href="/aboutus";
+      }
+
+      function cropRecommendation(){
+        //   Put the Url here
+          location.href="/cropprediction1";
+      }
+
+      function diseaseDetection(){
+        //   Put the Url here
+         location.href="/detectdiseasepage";
+      }
+
+    </script>
+
+</body>
+</html>
