@@ -116,10 +116,13 @@ def detect_disease():
     img = request.files["image"].read()                         # getting the image fill
     npimg = np.fromstring(img, np.uint8)                        # convert string file obj. to np array
     img = cv2.imdecode(npimg, cv2.IMREAD_UNCHANGED)             # convert np array to image
-    re_img = cv2.resize(img, (200, 200)) / 255.0                        # resize the image to desired size
-    re_tensor = re_img.reshape(1, 200, 200, 3)                  # reshape the image
+    re_img = cv2.resize(img, (200, 200)) / 255.0                # resize the image to desired size
 
-    one_hot = model.predict(re_tensor)                              # predictions predictions predictions
+    if re_img.shape[-1]!=3:
+        return render_template('./diseasedetection.html',output="Image channels exceeded limit",status="Failed!")
+
+    re_tensor = re_img.reshape(1, 200, 200, 3)                  # reshape the image
+    one_hot = model.predict(re_tensor)                          # predictions predictions predictions
     print(one_hot)
     out=disease_type[int(np.argmax(one_hot, axis=1))]
     string='Disease detected!'
@@ -140,4 +143,5 @@ def croppredict():
 
 
 # main
-if __name__ == "__main__": app.run(debug = True)
+if __name__ == "__main__":
+  app.run(debug = True)
